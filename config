@@ -1,3 +1,6 @@
+sudo apt install default-jre
+sudo apt install default-jdk
+
 jobmanager.memory.process.size: 8196m
 taskmanager.memory.managed.fraction: 0.05
 taskmanager.memory.process.size: 3080m
