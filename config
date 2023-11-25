@@ -1,0 +1,19 @@
+jobmanager.memory.process.size: 8196m
+taskmanager.memory.managed.fraction: 0.05
+taskmanager.memory.process.size: 3080m
+taskmanager.memory.task.heap.size: 212mb
+taskmanager.memory.jvm-metaspace.size: 256mb
+taskmanager.memory.flink.size: 2280m
+
+# The number of task slots that each TaskManager offers. Each slot runs one parallel pipeline.
+
+taskmanager.numberOfTaskSlots: 30
+taskmanager.memory.framework.heap.size: 212mb
+
+# The parallelism used for programs that did not specify and other parallelism.
+
+parallelism.default: 2
+yarn.appmaster.vcores: 1
+kubernetes.jobmanager.cpu.amount: 2.0
+kubernetes.jobmanager.cpu.limit-factor: 2.0
+# The default file system scheme and authority.
