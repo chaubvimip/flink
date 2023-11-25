@@ -1,1 +1,29 @@
 https://downloads.apache.org/flink/flink-1.17.1/flink-1.17.1-bin-scala_2.12.tgz
+./bin/flink run --detach /home/ubuntu/detection-engine-1.0.jar --db-rule-jdbc "Hf5lyaULpTU3JT6dyQc90W/qvAYyRwTzINUNTfQ9ZeRT/KLowSIM988Zt4ia/i2BWWzVrH4caZI6k63NZNFMKuxm5Z1LzfRNyaUaVkBbraFdf4ox33apafatYEWVrCJBVr5KIYuRjcOyqQaonSYmn+DAomOvDFQt/o/KRHlwgcWYMqLO/k85f860vCtdVVLjdzGOq7X7XkdX2klTaGUXFqT0V9zC4hUe0GXADL6EmU1a5BJtA/hpgUooqytSBpJLSwkuv2pEIqkSkBJlqL9UtJJeedosb1Q5hlg13PTvWrS7cBy1ZUjbHpd/rPgVj23q" \
+--events-source-type "Kafka" \
+--events-source-name "Kafka raw-event" \
+--events-source-parallelism 1 \
+--source-kafka-bootstrap-servers "192.168.3.33:9095" \
+--source-kafka-topic "event" \
+--source-kafka-truststore-location "/home/ubuntu/truststore.jks" \
+--source-kafka-truststore-pass "F9R1he3ygX7SMAlVcfiqMCyVQGr9XzUh" \
+--alerts-sink-type "CLICKHOUSE" \
+--alerts-sink-name "CLICKHOUSE DWH" \
+--alerts-sink-parallelism 1 \
+--alerts-sink-ch-hosts "192.168.3.9:8123" \
+--alerts-sink-ch-user "default" \
+--alerts-sink-ch-password "imip@1234" \
+--alerts-sink-ch-table "siem.alerts3" \
+--alerts-sink-kafka-truststore-location "/home/ubuntu/truststore.jks" \
+--alerts-sink-kafka-truststore-pass "F9R1he3ygX7SMAlVcfiqMCyVQGr9XzUh" \
+--whitelist-filter-enable "false" \
+--whitelist-filter-name "Whitelist Filter" \
+--whitelist-filter-parallelism 1 \
+--stateless-filter-enable "true" \
+--stateless-filter-name "Stateless Filter" \
+--stateless-filter-parallelism 5 \
+--stateful-filter-enable "true" \
+--stateful-filter-name "Stateful Filter" \
+--stateful-filter-parallelism 15 \
+--node-id 1 \
+--time-live 300000
