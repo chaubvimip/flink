@@ -20,3 +20,8 @@ yarn.appmaster.vcores: 1
 kubernetes.jobmanager.cpu.amount: 2.0
 kubernetes.jobmanager.cpu.limit-factor: 2.0
 # The default file system scheme and authority.
+
+
+"--source-kafka-truststore-location", "src/main/resources/truststore.jks",
+"--source-kafka-truststore-password", "123qweasdzxcabcimip",
+"--source-kafka-truststore-pass", "DBKZLf9pHUxliFkoipvSXDPBrsyTCIvH",
